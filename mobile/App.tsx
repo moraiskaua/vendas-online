@@ -1,5 +1,5 @@
-import { SafeAreaView } from 'react-native';
-import Login from './modules/login';
+import { SafeAreaView } from "react-native";
+import Login from "./src/modules/login";
 
 const App = () => {
   return (

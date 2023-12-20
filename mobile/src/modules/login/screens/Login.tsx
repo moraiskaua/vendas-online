@@ -1,13 +1,21 @@
 import { Text, View } from 'react-native';
+import styled from 'styled-components/native';
 
 interface LoginProps {}
 
 const Login = ({}: LoginProps) => {
   return (
-    <View>
+    <ViewModify>
       <Text>Tela de Login!</Text>
-    </View>
+    </ViewModify>
   );
 };
 
 export default Login;
+
+const ViewModify = styled.View`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+`;
