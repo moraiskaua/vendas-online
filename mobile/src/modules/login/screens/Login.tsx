@@ -1,21 +1,18 @@
-import { Text, View } from 'react-native';
-import styled from 'styled-components/native';
+import { Text } from 'react-native';
+import { ContainerLogin } from '../styles/login.style';
+import Input from '../../../shared/components/input/input';
+import Button from '../../../shared/components/button/button';
 
 interface LoginProps {}
 
 const Login = ({}: LoginProps) => {
   return (
-    <ViewModify>
+    <ContainerLogin>
       <Text>Tela de Login!</Text>
-    </ViewModify>
+      <Input />
+      <Button title="Teste" />
+    </ContainerLogin>
   );
 };
 
 export default Login;
-
-const ViewModify = styled.View`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-`;
