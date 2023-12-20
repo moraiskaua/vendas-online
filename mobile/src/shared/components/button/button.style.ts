@@ -14,3 +14,7 @@ export const ButtonContainer = styled.TouchableOpacity<ButtonContainerProps>`
 
   ${({ margin }) => (margin ? `margin: ${margin};` : '')};
 `;
+
+export const ButtonContainerSecondary = styled(ButtonContainer)`
+  background-color: red;
+`;

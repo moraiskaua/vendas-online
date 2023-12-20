@@ -7,4 +7,5 @@ export const ContainerLogin = styled.View`
   justify-content: center;
   align-items: center;
   padding: 16px;
+  gap: 8px;
 `;
