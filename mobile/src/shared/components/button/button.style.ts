@@ -1,10 +1,11 @@
+import { TouchableOpacityProps } from 'react-native';
 import styled from 'styled-components/native';
 
-interface ButtonContainerProps {
+interface PrimaryButtonProps extends TouchableOpacityProps {
   margin: string;
 }
 
-export const ButtonContainer = styled.TouchableOpacity<ButtonContainerProps>`
+export const PrimaryButton = styled.TouchableOpacity<PrimaryButtonProps>`
   width: 100%;
   border-radius: 6px;
   background-color: green;
@@ -15,6 +16,10 @@ export const ButtonContainer = styled.TouchableOpacity<ButtonContainerProps>`
   ${({ margin }) => (margin ? `margin: ${margin};` : '')};
 `;
 
-export const ButtonContainerSecondary = styled(ButtonContainer)`
+export const SecondaryButton = styled(PrimaryButton)`
   background-color: red;
+`;
+
+export const DisabledButton = styled(PrimaryButton)`
+  background-color: gray;
 `;

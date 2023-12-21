@@ -1,8 +1,9 @@
-import { Text } from 'react-native';
 import { ContainerLogin } from '../styles/login.style';
 import Input from '../../../shared/components/input/Input';
 import Button from '../../../shared/components/button/Button';
 import { useState } from 'react';
+import { ButtonTypes } from '../../../shared/themes/buttons';
+import Text from '../../../shared/components/text/Text';
 
 interface LoginProps {}
 
@@ -20,10 +21,14 @@ const Login = ({}: LoginProps) => {
 
   return (
     <ContainerLogin>
-      <Text>Tela de Login!</Text>
+      <Text size="20px">Login</Text>
       <Input placeholder="Email" onChangeText={setEmail} value={email} />
       <Input placeholder="Senha" onChangeText={setPassword} value={password} />
-      <Button title="Entrar" onPress={handleSubmit} />
+      <Button
+        type={ButtonTypes.primary}
+        title="Entrar"
+        onPress={handleSubmit}
+      />
     </ContainerLogin>
   );
 };
