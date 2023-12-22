@@ -2,7 +2,9 @@ import { ButtonTypes } from './buttons';
 
 export const theme = {
   colors: {
-    grayTheme: '#B1BBC2',
+    black: '#000000',
+    gray: '#B1BBC2',
+    white: '#FFFFFF',
   },
   buttons: {
     ButtonTypes,

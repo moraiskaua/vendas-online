@@ -1,10 +1,18 @@
 import { TextInputProps } from 'react-native';
-import { InputContainer } from './input.style';
+import { InputContainer, InputText } from './input.style';
+import { ReactNode } from 'react';
 
-interface InputProps extends TextInputProps {}
+interface InputProps extends TextInputProps {
+  icon?: ReactNode;
+}
 
-const Input = ({ ...props }: InputProps) => {
-  return <InputContainer {...props} />;
+const Input = ({ icon, ...props }: InputProps) => {
+  return (
+    <InputContainer>
+      <InputText {...props} />
+      {icon}
+    </InputContainer>
+  );
 };
 
 export default Input;

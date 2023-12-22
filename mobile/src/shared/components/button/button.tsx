@@ -40,7 +40,7 @@ const Button = ({
   if (disabled) {
     return (
       <DisabledButton margin={margin} {...props} disabled={disabled}>
-        {renderButton('#fff')}
+        {renderButton(theme.colors.white)}
       </DisabledButton>
     );
   }
@@ -49,14 +49,14 @@ const Button = ({
     case theme.buttons.ButtonTypes.secondary:
       return (
         <SecondaryButton margin={margin} {...props} onPress={handleOnPress}>
-          {renderButton('#fff')}
+          {renderButton(theme.colors.white)}
         </SecondaryButton>
       );
 
     default:
       return (
         <PrimaryButton margin={margin} {...props} onPress={handleOnPress}>
-          {renderButton('#fff')}
+          {renderButton(theme.colors.white)}
         </PrimaryButton>
       );
   }
